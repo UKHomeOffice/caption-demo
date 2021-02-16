@@ -1,0 +1,265 @@
+// Import Inter UI font
+@import url('https://rsms.me/inter/inter-ui.css');
+
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+$govuk-font-family: 'Inter UI', sans-serif;
+$govuk-typography-scale: (
+  80: (
+    null: (
+      font-size: 53px,
+      line-height: 55px
+    ),
+    tablet: (
+      font-size: 80px,
+      line-height: 80px
+    ),
+    print: (
+      font-size: 53pt,
+      line-height: 1.1
+    )
+  ),
+  48: (
+    null: (
+      font-size: 32px,
+      line-height: 1.3
+    ),
+    tablet: (
+      font-size: 40px,
+      line-height: 1.3
+    ),
+    print: (
+      font-size: 32pt,
+      line-height: 1.15
+    )
+  ),
+  36: (
+    null: (
+      font-size: 24px,
+      line-height: 1.3
+    ),
+    tablet: (
+      font-size: 32px,
+      line-height: 1.3
+    ),
+    print: (
+      font-size: 24pt,
+      line-height: 1.05
+    )
+  ),
+  27: (
+    null: (
+      font-size: 18px,
+      line-height: 20px
+    ),
+    tablet: (
+      font-size: 27px,
+      line-height: 30px
+    ),
+    print: (
+      font-size: 18pt,
+      line-height: 1.15
+    )
+  ),
+  24: (
+    null: (
+      font-size: 18px,
+      line-height: 1.3
+    ),
+    tablet: (
+      font-size: 24px,
+      line-height: 1.3
+    ),
+    print: (
+      font-size: 18pt,
+      line-height: 1.15
+    )
+  ),
+  19: (
+    null: (
+      font-size: 15px,
+      line-height: 1.35
+    ),
+    tablet: (
+      font-size: 18px,
+      line-height: 1.45
+    ),
+    print: (
+      font-size: 14pt,
+      line-height: 1.15
+    )
+  ),
+  16: (
+    null: (
+      font-size: 14px,
+      line-height: 16px
+    ),
+    tablet: (
+      font-size: 16px,
+      line-height: 20px
+    ),
+    print: (
+      font-size: 14pt,
+      line-height: 1.2
+    )
+  ),
+  14: (
+    null: (
+      font-size: 12px,
+      line-height: 15px
+    ),
+    tablet: (
+      font-size: 14px,
+      line-height: 20px
+    ),
+    print: (
+      font-size: 12pt,
+      line-height: 1.2
+    )
+  )
+);
+
+// Import GOV.UK Frontend
+@import '../../node_modules/govuk-frontend/govuk/all';
+
+// Patterns that aren't in Frontend
+@import 'patterns/check-your-answers';
+@import 'patterns/step-by-step-navigation';
+@import 'patterns/task-list';
+@import 'patterns/related-items';
+
+// Components that aren't in Frontend
+@import 'components/cookie-banner';
+@import 'components/timeline';
+@import 'components/data';
+
+// HOME OFFICE STYLES
+// Import header and footer
+@import 'patterns/ho-header';
+@import 'patterns/ho-footer';
+@import 'patterns/ho-subnav';
+
+// Custom styles
+@import 'components/custom-tabs';
+
+// Colour pallette
+$purple: #8f23b3;
+$background-grey: #f3f3f3;
+$dark-grey: #3b3b3b;
+
+// Other styling
+.ho-body {
+  background-color: $background-grey;
+  font-size: 18px;
+}
+
+.govuk-pipeline_body {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+footer {
+  box-shadow: 0 50vh 0 50vh #fff;
+}
+
+header {
+  .svg-logo {
+    max-height: 8rem;
+  }
+}
+
+.govuk-width-container {
+  max-width: 1400px;
+}
+
+.govuk-main-wrapper {
+  padding: 2rem;
+}
+
+.responsive-bottom-margin {
+  margin-bottom: 1rem;
+}
+
+.govuk-tag {
+  background-color: $purple;
+}
+
+.error-paragraph {
+  color: #b10e1e;
+}
+
+.row-select {
+  cursor: pointer;
+}
+
+.charts {
+  @include govuk-font(16);
+}
+
+.dashboard-charts {
+  @include govuk-font(14);
+}
+.chart-container {
+  height: 32vh;
+}
+
+.dashboard-chart-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 0.5rem;
+  height: 33vh;
+}
+
+.dashboard-main {
+  // height: 100vh;
+  width: 90vw;
+}
+
+.build-menu {
+  margin-right: 0.5rem;
+}
+
+.hod-checkmark {
+  color: govuk-colour('green');
+}
+.dashboard-rows {
+  margin: 3rem 0;
+}
+
+.side-space {
+  margin-left: 0.5rem;
+}
+.icon-medium {
+  font-size: 26px;
+  &:before {
+    vertical-align: middle;
+  }
+}
+.icon-small {
+  font-size: 18px;
+  &:before {
+    vertical-align: middle;
+    // padding-bottom: 1em;
+  }
+}
+
+.side-space-left {
+  margin-left: 0.5rem;
+}
+
+.side-space-right {
+  margin-right: 0.5rem;
+}
+
+.page-button-forward {
+  margin-left: 0.5rem;
+}
+
+.page-button-back {
+  margin-right: 0.5rem;
+}
+
+.page-button-text {
+  text-align: center;
+}

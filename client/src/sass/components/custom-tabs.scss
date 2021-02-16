@@ -1,0 +1,81 @@
+.tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.tabs label {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  display: block;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  background-color: govuk-colour('light-grey', $legacy: 'grey-4');
+  // font-weight: bold;
+  -webkit-transition: background ease 0.2s;
+  transition: background ease 0.2s;
+}
+
+.tabs .tab {
+  -webkit-box-ordinal-group: 100;
+  -webkit-order: 99;
+  -ms-flex-order: 99;
+  order: 99;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1rem;
+  background-color: $govuk-body-background-colour;
+  border: 1px solid $govuk-border-colour;
+}
+
+.tabs input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+}
+
+.tabs input[type='radio']:checked + label {
+  $border-width: 1px;
+  margin-top: -govuk-spacing(1);
+
+  // Compensation for border (otherwise we get a shift)
+  margin-bottom: -$border-width;
+  padding-top: govuk-spacing(3) - $border-width;
+  padding-right: govuk-spacing(4) - $border-width;
+  padding-bottom: govuk-spacing(3) + $border-width;
+  padding-left: govuk-spacing(4) - $border-width;
+
+  border: $border-width solid $govuk-border-colour;
+  border-bottom: 0;
+
+  background-color: $govuk-body-background-colour;
+}
+
+.tabs input[type='radio']:checked + label + .tab {
+  display: block;
+}
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    -webkit-box-ordinal-group: NaN;
+    -webkit-order: initial;
+    -ms-flex-order: initial;
+    order: initial;
+  }
+
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
