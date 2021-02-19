@@ -529,7 +529,7 @@ const Header = () => {
             </div>
             <div className="header-title--default">
               <Link to="/" className="header-name">
-                BF Demo
+                Caption demo
               </Link>
             </div>
             <div className="header-menu--menu"></div>
